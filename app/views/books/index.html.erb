@@ -1,0 +1,21 @@
+<div class = "books_header">
+	<h1 class = "books_title">books</h1>
+</div>
+<div class = "books_main">
+	
+	<div class = "books-title">
+		<span>title</span>
+		<% @books.each do |book| %>
+		<span><%= book.title %></span>
+		<% end %>
+	</div>
+
+	<div class = "books-body">
+		<span>body</span>
+		<% @books.each do |book| %>
+		<span><%= book.body %></span>
+		<% end %>
+	</div>
+
+
+</div>

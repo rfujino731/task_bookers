@@ -10,6 +10,10 @@ class BooksController < ApplicationController
 		redirect_to '/new'
 	end
 
+	def index
+		@books = Book.all
+    end
+
 	private
 
 	def book_params
