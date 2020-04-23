@@ -1,21 +1,23 @@
 <div class = "books_header">
-	<h1 class = "books_title">books</h1>
+	<h1 class = "books_title">Books</h1>
 </div>
-<div class = "books_main">
-	
-	<div class = "books-title">
-		<span>title</span>
-		<% @books.each do |book| %>
-		<span><%= book.title %></span>
-		<% end %>
-	</div>
+<table class = "books_table">
+	<tr>
+		<th class = "books_table_title">title</th>
+		<th class = "books_table_body">body</th>
+		<th class = "books_table_show">show</th>
+		<th class = "books_table_edit">edit</th>
+		<th class = "books_table_destroy">destroy</th>
+	</tr>
 
-	<div class = "books-body">
-		<span>body</span>
-		<% @books.each do |book| %>
-		<span><%= book.body %></span>
-		<% end %>
-	</div>
+	<% @books.each do |book| %>
+	<tr>
+		<th><%= book.title %></th>
+		<th><%= book.body %></th>
+		<th>show</th>
+		<th>edit</th>
+		<th>destory</th>
+	</tr>
+	<% end %>
 
-
-</div>
+</table>
