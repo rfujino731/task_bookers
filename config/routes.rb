@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   get 'new' => 'books#new'
 
-  post 'books' => 'books#create'
+  post 'book' => 'books#create'
 end
