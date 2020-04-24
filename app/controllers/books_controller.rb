@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
 	
-	
 
 	def index
 		@books = Book.all
@@ -11,6 +10,8 @@ class BooksController < ApplicationController
 		book = Book.new(book_params)
 		book.save
 		redirect_to '/books'
+	end
+
 	end
 
  #    def new
