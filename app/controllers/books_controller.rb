@@ -12,7 +12,6 @@ class BooksController < ApplicationController
 		redirect_to '/books'
 	end
 
-	end
 
  #    def new
 	# 	# 投稿するために空のモデルオブジェクトを生成する
