@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #一覧(今回のメインページ)表示
   get  'books' => 'books#index'
   #投稿後のアクション
-  post 'book' => 'books#create'
+  post 'books' => 'books#create'
   
   #newは、投稿時のページ
   # get 'new' => 'books#new'
