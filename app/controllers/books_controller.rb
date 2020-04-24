@@ -1,9 +1,5 @@
 class BooksController < ApplicationController
-	def new
-		# 投稿するために空のモデルオブジェクトを生成する
-		@book = Book.new
-	end
-
+	
 	def create
 		book = Book.new(book_params)
 		book.save
@@ -12,7 +8,14 @@ class BooksController < ApplicationController
 
 	def index
 		@books = Book.all
+		@book = Book.new
     end
+
+ #    def new
+	# 	# 投稿するために空のモデルオブジェクトを生成する
+	# 	@book = Book.new
+	# end
+
 
 	private
 
