@@ -24,19 +24,23 @@
 
 <h2 class = "new_title">new book</h2>
 <div class = "new_main">
-	
-	<%= form_for(@book) do |f| %>
-		<%= render 'error_messages' %>
-		<h4>title</h4>
 
+	<%= form_for(@book) do |f| %>
+
+		<h4>title</h4>
 		<%= f.text_field :title %>
+		<% if @book.errors.messages[:title].any? %>
+			<span class="error"><%= @book.errors.messages[:title] %></span>
+		<% end %>
 
 		<h4>body</h4>
 		<%= f.text_area :body %>
+		<% if @book.errors.messages[:body].any? %>
+			<span class="error"><%= @book.errors.messages[:body] %></span>
+		<% end %>
+
 		<br>
 		<%= f.submit 'Create Book' %>
 	<% end %>
 
 </dev>
-
-<%= render 'error_massages' %>
