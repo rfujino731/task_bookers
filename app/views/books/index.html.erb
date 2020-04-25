@@ -14,7 +14,7 @@
 	<tr class = "books_table_date">
 		<th><%= book.title %></th>
 		<th><%= book.body %></th>
-		<th>show</th>
+		<th><%=link_to "show", "/books/#{book.id}" %></th>
 		<th>edit</th>
 		<th>destory</th>
 	</tr>
