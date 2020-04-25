@@ -26,8 +26,9 @@
 <div class = "new_main">
 	
 	<%= form_for(@book) do |f| %>
-	<%= render 'books/error_messages', model: f.object %>
+		<%= render 'error_messages' %>
 		<h4>title</h4>
+
 		<%= f.text_field :title %>
 
 		<h4>body</h4>
@@ -37,3 +38,5 @@
 	<% end %>
 
 </dev>
+
+<%= render 'error_massages' %>

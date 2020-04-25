@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   #投稿後のアクション
   post 'books' => 'books#create'
   
+  get 'books/:id' => 'books#show', as: 'book'
   #newは、投稿時のページ
   # get 'new' => 'books#new'
 end

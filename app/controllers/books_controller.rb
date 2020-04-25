@@ -12,6 +12,10 @@ class BooksController < ApplicationController
 		redirect_to '/books'
 	end
 
+	def show
+		@book = Book.find(params[:id])
+	end
+
 
  #    def new
 	# 	# 投稿するために空のモデルオブジェクトを生成する
