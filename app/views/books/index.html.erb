@@ -14,9 +14,9 @@
 	<tr class = "books_table_date">
 		<th><%= book.title %></th>
 		<th><%= book.body %></th>
-		<th><%=link_to "show", "/books/#{book.id}" %></th>
-		<th>edit</th>
-		<th>destory</th>
+		<th><%=link_to "show", book_path(book.id) %></th>
+		<th><%= link_to "edit",edit_book_path(book.id) %></th>
+		<th><%= link_to "delete", destroy_book_path(book.id), method: :delete, data: {confirm: "Are you sure?" } %></th>
 	</tr>
 	<% end %>
 
