@@ -1,13 +1,12 @@
-<h1>Editing Book</h1>
-<%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
-	<h4>title</h4>
-	<%= f.text_field :title %>
-	<h4>body</h4>
-	<%= f.text_area :body %>
-	<%= f.submit 'update' %>
+<h1 class = "edit">Editing Book</h1>
+
+	<h4 class = "edit">title</h4>
+	<div class = "edit"><%= f.text_field :title %></div>
+	<h4 class = "edit">body</h4>
+	<div class = "edit"><%= f.text_area :body %></div>
+	<div class = "edit"><%= f.submit 'update' %></div>
 <% end %>
-
-<%=link_to "show", book_path(@book.id) %>
+<p class = "edit">
+<%=link_to "show", book_path(@book.id) %> | 
 <%=link_to "back", books_path %>
-
-<h3>cssはまだ未設定</h3>
+</p>

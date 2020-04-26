@@ -1,10 +1,9 @@
-<h3>詳細画面‗cssはまだ未設定</h3>
 <br>
-<p><%= notice %></p>
+<p class = "notice"><%= notice %></p>
 <br>
-<p>title:<%= @book.title %></p>
+<p class = "show">title:<%= @book.title %></p>
 <br>
-<p>body:<%= @book.body%></p>
+<p class = "show">body:<%= @book.body%></p>
 
-<%=link_to "edit", edit_book_path(@book.id) %>
-<%=link_to "back", books_path %>
+<P class = "show_link"><%=link_to "edit", edit_book_path(@book.id) %> | 
+<%=link_to "back", books_path %></P>
