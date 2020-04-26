@@ -90,11 +90,11 @@ describe '投稿のテスト' do
       it 'Editリンクが表示される' do
         edit_link = find_all('a')[0]
         expect(edit_link.native.inner_text).to match(/edit/i)
-			end
+      end
       it 'Backリンクが表示される' do
         back_link = find_all('a')[1]
         expect(back_link.native.inner_text).to match(/back/i)
-			end  
+      end  
     end
     context 'リンクの遷移先の確認' do
       it 'Editの遷移先は編集画面か' do
@@ -124,11 +124,11 @@ describe '投稿のテスト' do
       it 'Showリンクが表示される' do
         show_link = find_all('a')[0]
         expect(show_link.native.inner_text).to match(/show/i)
-			end  
+      end  
       it 'Backリンクが表示される' do
         back_link = find_all('a')[1]
         expect(back_link.native.inner_text).to match(/back/i)
-			end  
+      end  
     end
     context 'リンクの遷移先の確認' do
       it 'Showの遷移先は編集画面か' do
