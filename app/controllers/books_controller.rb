@@ -22,18 +22,18 @@ class BooksController < ApplicationController
 
 	def edit
 		@book = Book.find(params[:id])
-		if @book.save
-		   redirect_to(book_path(@book.id), notice:'book was successfully created')
-		 else
-		   @books = Book.all
-		   render :edit
-		end
+		#
+		
 	end
 
 	def update
-		book = Book.find(params[:id])
-		book.update(book_params)
-		redirect_to books_path
+		@book = Book.find(params[:id])
+		if @book.update(book_params)
+		   redirect_to(book_path(@book.id), notice:'book was successfully created')
+
+		else
+			render :edit
+		end
 	end
 
 	def destroy
@@ -42,12 +42,6 @@ class BooksController < ApplicationController
 		redirect_to(books_path, notice:'book was successfully dekted')
 	end
 	
-
-
- #    def new
-	# 	# 投稿するために空のモデルオブジェクトを生成する
-	# 	@book = Book.new
-	# end
 
 
 	private
