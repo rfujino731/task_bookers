@@ -1,14 +1,16 @@
 <h1 class = "edit">Editing Book</h1>
 <%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
-	<div>
+	<div class = "new_main">
     <% if @book.errors.any? %>
-    		<ul>
+		<ul >
 			<% @book.errors.full_messages.each do |message| %>
-				<li><%= message %></li>
+			<li class = "error_message">error:<%= message %></li>
 			<% end %>
-		    </ul>
-	<% end %>
+	    </ul>
+		<% end %>
+		</ul>
 	</div>
+	
 
 	<h4 class = "edit">title</h4>
 	<div class = "edit"><%= f.text_field :title %></div>
